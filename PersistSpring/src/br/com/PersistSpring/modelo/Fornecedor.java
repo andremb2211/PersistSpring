@@ -10,8 +10,10 @@ import java.util.List;
  * 
  */
 @Entity
-@Table(name="FORNECEDOR")
-@NamedQuery(name="Fornecedor.findAll", query="SELECT f FROM Fornecedor f")
+@NamedQueries({ 
+@NamedQuery(name="Fornecedor.findAll", query="SELECT f FROM Fornecedor f"),
+@NamedQuery(name ="Fornecedor.buscaNome", query = "SELECT f FROM Fornecedor f WHERE f.nome like ?1 ")
+})
 public class Fornecedor implements Serializable {
 	private static final long serialVersionUID = 1L;
 

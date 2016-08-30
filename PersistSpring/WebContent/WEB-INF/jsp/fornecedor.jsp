@@ -48,8 +48,8 @@
 			<input type="submit" value="Pesquisar Geral"  >
 			
 	</form>  -->
-	<c:forEach items="${listaCliente}" var="cliente">
-		${cliente.nome } - ${cliente.cpf } 
+	<c:forEach items="${listaFornecedor}" var="cliente">
+		${fornecedor.nome }
 		<br>
 	</c:forEach>
 	<br><br>
@@ -59,9 +59,9 @@
 			<input type="submit" value="Pesquisar"  >
 			
 	</form>  -->
-	<form action="pesquisarClienteNome"   method="post">
+	<form action="pesquisarFornecedorNome"   method="post">
 	<div class="input-group" align="center">
-      <input type="text" class="form-control" name="nome" placeholder="Nome Cliente">
+      <input type="text" class="form-control" name="nome" placeholder="Nome do fornecedor">
       <div class="input-group-btn">
         <button class="btn btn-default glyphicon glyphicon-search" type="submit"></button> 
       </div>
@@ -70,8 +70,9 @@
 	
 	<br><br>
 	
-		<c:forEach items="${listaClienteNome}" var="cliente">
-		${cliente.nome } - ${cliente.cpf } 
+	
+	<c:forEach items="${listaFornecedorNome}" var="fornecedor">
+		${fornecedor.nome }
 		<br>
 	</c:forEach>
 	

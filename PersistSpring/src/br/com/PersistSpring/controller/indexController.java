@@ -45,6 +45,7 @@ public class indexController {
 	@RequestMapping("/telaProduto")
 	public ModelAndView telaProduto(Model model) {
 		model.addAttribute("listaFornecedor",	fornecedorServico.pesquisarFornecedor());
+		model.addAttribute("listaProduto",	produtoServico.pesquisarProduto());
 		return new ModelAndView("/produto");
 	}
 	@RequestMapping("/telaPedido")

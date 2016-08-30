@@ -57,6 +57,9 @@
 <a href="index" class="btn btn-success" >Voltar </a>
 </div>
 </form>
+
+	
+
 	
 	
 	<c:if test="${mensagem != null}">
@@ -69,7 +72,7 @@
 
 	<form action="pesquisarProdutoNome"   method="post">
 	<div class="input-group" align="center">
-      <input type="text" class="form-control" name="nome" placeholder="Nome Cliente">
+      <input type="text" class="form-control" name="nome" placeholder="Nome do Produto">
       <div class="input-group-btn">
         <button class="btn btn-default glyphicon glyphicon-search" type="submit"></button> 
       </div>
@@ -85,5 +88,31 @@
 	
 	</div> 
 </div>
+
+
+<c:if test="${listaProduto != null}">
+<div class="container">
+		<table border="1" class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Nome do Produto</th>
+					<th>Valor</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${listaProduto}" var="produto">
+					<tr>
+						<td>${produto.descricao}</td>
+						<td>${produto.valor}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+		<br>
+	</div>
+</c:if>
+	
+
+
 </body>
 </html>

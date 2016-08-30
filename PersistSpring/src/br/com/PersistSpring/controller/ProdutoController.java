@@ -25,6 +25,7 @@ public class ProdutoController {
 	public ModelAndView cadastraProduto(Model model,Produto produto,Fornecedor fornecedor) {
 			model.addAttribute("mensagem",	produtoServico.salvar(produto,fornecedor));
 			model.addAttribute("listaFornecedor",	fornecedorServico.pesquisarFornecedor());
+			model.addAttribute("listaProduto",	produtoServico.pesquisarProduto());
 		return new ModelAndView("/produto");
 	}
 	

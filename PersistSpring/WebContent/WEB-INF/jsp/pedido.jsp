@@ -52,7 +52,7 @@
  <div class="form-group">
   	<label class="col-sm-2 control-label">Data:</label>
  	 <div class="col-sm-10">
-         <input type="date" name="data" id="datepicker"  class="form-control" />
+         <input type="text" name="data" id="datepicker"  class="form-control" />
   </div>
 </div>	
 
@@ -156,7 +156,7 @@ ${lp.produto.descricao } pedidos Cadastrados
 	</table> 
 	<input type="hidden" name="id" value="${pedido.id}" >
 	<input type="hidden" name="cliente.id" value="${pedido.cliente.id}" >
-	<input type="submit" value="Compra Geral" > s${pedido.id}
+	<input type="submit" value="Compra Geral" > ${pedido.id}
 	
 	</form>
  </c:if>
